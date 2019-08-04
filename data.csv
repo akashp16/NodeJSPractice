@@ -1,0 +1,5 @@
+ProductName,SKU,Price,Min_Order_Quantity,Category
+abc,SKU1,100,10,TShirt
+xyz,SKU2,50,7,Shirt
+pqr,SKU1,30,5,shorts
+
