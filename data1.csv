@@ -1,4 +1,4 @@
-Name,Surname,Age,Gender
-John,Snow,26,M
-Clair,White,33,F
-Fancy,Brown,78,F
+ProductName,SKU,Price,Min_Order_Quantity,Category
+abc,SKU1,100,10,TShirt
+xyz,SKU2,50,7,Shirt
+pqr,SKU1,30,5,shorts
