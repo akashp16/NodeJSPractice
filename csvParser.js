@@ -19,18 +19,18 @@ async function getData(fileName, csvRows,resolve, reject) {
 }
 
 function getDataFromAllCsv(files, callback){
-var csvRows = [];
-const promises = [];
-files.map((item) => {
-    promises.push( new Promise((resolve,reject) => {
-    getData(item,csvRows, resolve, reject);
+  var csvRows = [];
+  const promises = [];
+  files.map((item) => {
+      promises.push( new Promise((resolve,reject) => {
+      getData(item,csvRows, resolve, reject);
 
-    }));
-})
-var proms = Promise.all(promises).then(() => console.log("csv data processed sucessfully...")).catch(error => console.log(`Error in csv data process ${error}`)) ;
-proms.then(function(results) {
-	return callback(csvRows);
-	});
+      }));
+  })
+  var proms = Promise.all(promises).then(() => console.log("csv data processed sucessfully...")).catch(error => console.log(`Error in csv data process ${error}`)) ;
+  proms.then(function(results) {
+  	return callback(csvRows);
+  	});
 }
 
 
