@@ -2,8 +2,8 @@ const csv = require('csv-parser');
 const fs = require('fs');
 var Promise = require('promise');
 
-  async function getData(fileName, csvRows,resolve, reject) {	
-  	console.log(fileName);
+async function getData(fileName, csvRows,resolve, reject) {	
+  	//console.log(fileName);
 	fs.createReadStream(fileName)
   .pipe(csv())
   .on('data', (row) => {
@@ -25,7 +25,7 @@ const promises = [];
 
     }));
 })
-var proms = Promise.all(promises).then(() => console.log("return csvRows")).catch(error => console.log(`Error in executing ${error}`)) ;
+var proms = Promise.all(promises).then(() => console.log("csv data processed sucessfully...")).catch(error => console.log(`Error in executing ${error}`)) ;
 proms.then(function(results) {
  return callback(csvRows);
 });
